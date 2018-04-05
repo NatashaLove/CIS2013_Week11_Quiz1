@@ -20,6 +20,19 @@ int main () {
 		cout << "Enter number of computers in row " << i << " : ";
 		cin >> tmp;
 		cols [i] = tmp;
-		multi_array [i] = new int* tmp[]
+		multi_array [i] = new int* [tmp];
 		
 	}
+	
+	for (int x=0; x <rows; x++) {
+		cout<< "Row " << x;
+		
+		for (int y=0; y < comps; y++) {
+			
+			cout<< " " << "---";
+		}
+		
+		cout <<endl;
+	}
+	return 0;
+}	

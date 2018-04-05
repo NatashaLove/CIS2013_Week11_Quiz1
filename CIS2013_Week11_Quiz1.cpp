@@ -26,14 +26,17 @@ int main () {
 		
 	}
 	
-	print (room, rows, x);
+	//print (room, rows, x);
 	
 	for (int a = 0; a < rows; a++)
+		
 	{
+		cout << "Row " << a;
 		for (int b = 0;b < x; b++)
 		{
-			room[a][b] = '.';
+			cout<< " " << "---";
 		}
+		cout << endl;
 	}
 	
 	//cout << 
