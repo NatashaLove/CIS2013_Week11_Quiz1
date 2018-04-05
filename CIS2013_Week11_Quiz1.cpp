@@ -14,6 +14,7 @@ int main () {
 	cin >> rows;
 	
 	ByteArray *room = new ByteArray[rows];
+	
 	//int* room = new int [rows];
     for (int i=0; i<rows; i++)	{
 		room[i] = new unsigned char [x];
@@ -23,14 +24,15 @@ int main () {
 		cout << "Number of computers on row " << i << " : " << x << endl;
 					
 		
-		print (room, rows, x);
-		
 	}
-	for (int i = 0; i < rows; i++)
+	
+	print (room, rows, x);
+	
+	for (int a = 0; a < rows; a++)
 	{
-		for (int j = 0;j < x; j++)
+		for (int b = 0;b < x; b++)
 		{
-			room[i][j] = '.';
+			room[a][b] = '.';
 		}
 	}
 	
