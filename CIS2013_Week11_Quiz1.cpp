@@ -2,6 +2,7 @@
 
 using namespace std;
 typedef unsigned char* ByteArray;
+void print(unsigned char** board, int x, int y);
 
 int main () {
 	
@@ -22,7 +23,7 @@ int main () {
 		cout << "Number of computers on row " << i << " : " << x << endl;
 					
 		
-		//print (room, rows, x);
+		print (room, rows, x);
 		
 	}
 	for (int i = 0; i < rows; i++)
