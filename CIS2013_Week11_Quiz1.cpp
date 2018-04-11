@@ -16,15 +16,15 @@ int main () {
 	ByteArray *room = new ByteArray[rows];
 	
 	//int* room = new int [rows];
-    for (int i=0; i<rows; i++)	{
-		room[i] = new unsigned char [x];
+    //for (int i=0; i<rows; i++)	{
+	//	room[i] = new unsigned char [x];
 		//room [i] =x;
-		cout << "Enter number of computers in row " << i << endl;
+		cout << "Enter number of computers in a row " <<endl;
 		cin >> x;
-		cout << "Number of computers on row " << i << " : " << x << endl;
+		cout << "Number of computers in a row : " << x << endl;
 					
 		
-	}
+	//}
 	
 	//print (room, rows, x);
 	
