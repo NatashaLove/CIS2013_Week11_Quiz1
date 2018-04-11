@@ -121,7 +121,7 @@ int main () {
 	return 0;
 }
 
-void print(unsigned char** board, int rows, int columns)
+/*void print(unsigned char** board, int rows, int columns)
 {
 
 		cout << '\t';
@@ -143,7 +143,40 @@ void print(unsigned char** board, int rows, int columns)
 	
 	cout<< endl;
 }
+*/
 
+void print(unsigned char** board, int rows, int columns)
+{
+	cout << '\t';
+	for (int i = 0;i < columns;i++)
+	{
+		cout <<' '<< i<<"  ";
+	}
+	cout << endl;
+	for (int i = 0; i < rows; i++)
+	{
+		cout << "Row " << i<<'\t';
+
+		for (int j = 0; j < columns;j++)
+		{
+			if (board[i][j] != '-')
+			{
+				int n = board[i][j];
+				if (n < 10)
+					cout << ' ' << n << ' ';
+				else if (n == 100)
+					cout << "100";
+				else
+					cout <<' '<< n;
+			}
+			else
+				cout << " - ";
+			cout << ' ';
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
 
 /*
 void print (ByteArray[rows]) {
