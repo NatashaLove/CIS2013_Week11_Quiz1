@@ -4,7 +4,7 @@ using namespace std;
 typedef unsigned char* ByteArray;
 //void print (ByteArray[rows]);
 
-void print(unsigned char** board, int x, int y);
+//void print(unsigned char** board, int x, int y);
 
 
 int main () {
@@ -30,9 +30,9 @@ int main () {
 		
 	//}
 	
-	print (room, rows, x);
+	//print (room, rows, x);
 	
-	/*
+	
 	for (int a = 0; a < rows; a++)
 		
 	{
@@ -43,7 +43,7 @@ int main () {
 		}
 		cout << endl;
 	}
-	*/
+	
 	
 	cout << " Pick a row/computer to set a grade on: " << endl;
 	cin >> rows;
@@ -51,6 +51,18 @@ int main () {
 	cout << "You picked row " << rows << " and computer " << x<< endl; 
 	cout << " The grade is: " ;
 	cin >> grade;
+	
+	for (int i=0; i<=rows;i++){
+		cout << "Row " << i << ": ";
+		for(int j=0;j<=room*[i];j++){
+			if((i==rows)&&(j==x)){
+			cout << grade;}
+			else cout << "--- ";
+			
+		}
+
+	}
+	
 	
 	/*
 	for (int a = 0; a < rows; a++)
@@ -67,7 +79,7 @@ int main () {
 	
 	return 0;
 }
-
+/*
 void print(unsigned char** board, int x, int y)
 {
 
@@ -83,7 +95,7 @@ void print(unsigned char** board, int x, int y)
 	}
 	cout<< endl;
 }
- 
+ */
 
 /*
 void print (ByteArray[rows]) {
