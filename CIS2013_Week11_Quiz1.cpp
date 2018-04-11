@@ -4,7 +4,7 @@ using namespace std;
 typedef unsigned char* ByteArray;
 //void print (ByteArray[rows]);
 
-//void print(unsigned char** board, int x, int y);
+void print(unsigned char** board, int x, int y);
 
 
 int main () {
@@ -23,17 +23,36 @@ int main () {
     //for (int i=0; i<rows; i++)	{
 	//	room[i] = new unsigned char [x];
 		//room [i] =x;
+		
 		cout << "Enter number of computers in a row " <<endl;
 		cin >> x;
+		
+			//Надо инициализировать каждую row массива
+			
+	for (int i = 0; i < rows; i++)
+	{
+		unsigned char* t = new unsigned char[x];
+		room[i] = t;
+		for (int j = 0;j < x; j++, t++)
+		{
+			*t = '-';
+		}
+		//предыдущее равносильно следующему
+		/*for (int j = 0; j < x; j++)
+		{
+			room[i][j] = '-';
+		}*/
+	}
+		
 		cout << "Number of computers in a row : " << x << endl;
 					
 		
 	//}
 	
-	//print (room, rows, x);
+	print (room, rows, x);
 	
 	
-	for (int a = 0; a < rows; a++)
+	/*for (int a = 0; a < rows; a++)
 		
 	{
 		cout << "Row " << a;
@@ -43,18 +62,39 @@ int main () {
 		}
 		cout << endl;
 	}
+	*/
 	
+		//Мы не можем менять x и rows - они постоянны - это размеры комнаты! 
+	/*cin >> rows;
+	cin >> x;*/
+	
+	int row;
+	int column;
+	char end;
+	while (1)
+	{
 	
 	cout << " Pick a row/computer to set a grade on: " << endl;
-	cin >> rows;
-	cin >> x;
-	cout << "You picked row " << rows << " and computer " << x<< endl; 
+	cin >> row;
+	cin >> column;
+	cout << "You picked row " << row << " and computer " << column << endl; 
 	cout << " The grade is: " ;
 	cin >> grade;
 	
-	for (int i=0; i<=rows;i++){
+	
+	room[row][column] = grade;
+		print(room, rows, x);
+
+		cout << " Thats all? (Y/N)";
+		cin >> end;
+		if (end == 'Y')
+			break;
+	}
+	
+
+	/*for (int i=0; i<=rows;i++){
 		cout << "Row " << i << ": ";
-		for(int j=0;j<=room*[i];j++){
+		for(int j=0;j<=room[i];j++){
 			if((i==rows)&&(j==x)){
 			cout << grade;}
 			else cout << "--- ";
@@ -62,6 +102,7 @@ int main () {
 		}
 
 	}
+	*/
 	
 	
 	/*
@@ -79,23 +120,30 @@ int main () {
 	
 	return 0;
 }
-/*
-void print(unsigned char** board, int x, int y)
+
+void print(unsigned char** board, int rows, int columns)
 {
 
-	for (int i = 0; i < y; i++)
+		cout << '\t';
+	for (int i = 0;i < columns;i++)
 	{
-		cout << "Row " <<i << y;
-		
-		for (int j = 0; j < x;j++)
-		{
-			cout << board[i][j]= '-' << ' ';
-		}
-		cout << '\n';
+		cout << i<<' ';
 	}
+	cout << endl;
+	for (int i = 0; i < rows; i++)
+	{
+		cout << "Row " << i<<'\t';
+
+		for (int j = 0; j < columns;j++)
+		{
+			cout << board[i][j] << ' ';
+		}
+		cout << endl;
+	}
+	
 	cout<< endl;
 }
- */
+
 
 /*
 void print (ByteArray[rows]) {
